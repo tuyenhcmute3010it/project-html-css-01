@@ -1,0 +1,237 @@
+/* pc */
+@media screen and (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+  .show-on-mobile {
+    display: none;
+  }
+}
+/* Tablet and mobile */
+@media screen and (max-width: 991px) {
+  .navbar ul {
+    display: none;
+  }
+  .navbar {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+  .toggle-menu {
+    width: 24px;
+    color: #666;
+  }
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+  }
+  .menu-drawer {
+    position: fixed;
+    inset: 0 40% 0 0;
+    background: #fff;
+    z-index: 2;
+    transform: translateX(-100%);
+    padding: 60px;
+    .separate {
+      border-top: 1px solid #ebebeb;
+    }
+  }
+  .menu-checkbox:checked ~ .menu-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  .menu-drawer ul {
+    margin-top: 32px;
+  }
+
+  .menu-drawer ul a {
+    color: #333;
+    padding: 18px 0;
+    display: block;
+    font-weight: 500;
+  }
+  .hero-img {
+    display: none;
+  }
+  .hero .info {
+    margin: 138px auto 0;
+    width: 80%;
+    text-align: center;
+  }
+  .hero .desc {
+    margin: 30px auto 0;
+    width: 80%;
+  }
+  .clients .images {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .list-guide .guide-items .title {
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 5px;
+  }
+
+  .list-guide {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feature .list-feature {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .stats .row {
+    flex-direction: column;
+  }
+  .stats .info,
+  .stats .img-block {
+    width: 100%;
+  }
+  .stats .icon {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+  }
+  .stats .info {
+    order: 1;
+    text-align: start;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .stats .img-block {
+    order: 2;
+  }
+  .stats .info .sub-title {
+    width: 70%;
+  }
+
+  .stats .info .desc {
+    width: 100%;
+  }
+  .stats .row-qty {
+    flex-direction: row;
+  }
+  .stats .qty {
+    font-size: 5rem;
+  }
+  .footer .row-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .show-on-mobile {
+    display: none;
+  }
+}
+/* mobile */
+@media screen and (max-width: 767px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .menu-drawer {
+    inset: 0 25% 0 0;
+    padding: 40px;
+  }
+  .action {
+    display: none;
+  }
+  .hero .title {
+    font-size: 5.2rem;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .hero .desc {
+    margin: 30px auto 0;
+    width: 100%;
+  }
+  .hero .sub-title {
+    margin-top: 10px;
+  }
+  .hero .desc {
+    width: 100%;
+  }
+
+  .clients .desc {
+    width: 100%;
+  }
+  .images {
+    row-gap: 20px;
+  }
+  .list-guide {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .feature .link {
+    display: none;
+  }
+  .feature .desc {
+    width: 70%;
+  }
+  .feature .list-feature {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .view-all {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .stats .row .img-block .image {
+    width: 100%;
+  }
+  .stats .img-block .trending {
+    top: 0px;
+    left: 20px;
+  }
+  .stats .row-qty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+  }
+  .subscription .image {
+    display: none;
+  }
+  .subscription .info {
+    padding-left: 10px;
+    width: 100%;
+  }
+  .footer .row-top {
+    grid-template-columns: 1fr;
+  }
+  .footer .row-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+  }
+  .hero {
+    margin-top: 0px;
+  }
+  .hero-wrap {
+    min-height: calc(100vh - 90px);
+  }
+  .hero {
+    margin-top: -120px;
+  }
+}
